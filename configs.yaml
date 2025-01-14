@@ -1,0 +1,32 @@
+Game:
+  name: Donkey Kong
+  Paths:
+    folder: "Mesen.0.9.9\\"
+    emulator: "Mesen.0.9.9\\Mesen.exe"
+    game: "Donkey Kong\\Donkey Kong (USA) (GameCube Edition).nes"
+  Emulator_State:
+    RecentGames_Path: "Emulator_State\\RecentGames\\"
+    SaveStates_Path: "Emulator_State\\SaveStates\\"
+
+Tensorflow:
+  Features:
+    Keys:
+      up-arrow: key
+      down-arrow: key
+      left-arrow: key
+      right-arrow: key
+      S-key: key
+    max_height: Level
+    current_height: Level
+    barrel:
+      amount: Level
+      nearest: Level
+    stairs:
+      available: bool
+      complete: bool
+  log_level: '2'
+  layer_1: 10
+
+Photo_Analysis:
+  Path:
+    folder: "Photo_Analysis\\"

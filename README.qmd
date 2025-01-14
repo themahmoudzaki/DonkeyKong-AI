@@ -1,0 +1,11 @@
+project idea
+
+Create AI to play doneykong
+
+How will I do it no clue
+
+Inspiration 
+youtube video
+
+Goal 
+To make it better than the one in the youtube video

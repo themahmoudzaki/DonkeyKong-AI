@@ -1,0 +1,2 @@
+up, down, right, left keys to move
+s key to jump
