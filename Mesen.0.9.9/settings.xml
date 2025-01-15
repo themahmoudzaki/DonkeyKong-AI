@@ -466,7 +466,7 @@
     <Band20Gain>0</Band20Gain>
   </AudioInfo>
   <VideoInfo>
-    <ShowFPS>true</ShowFPS>
+    <ShowFPS>false</ShowFPS>
     <OverscanLeft>0</OverscanLeft>
     <OverscanRight>0</OverscanRight>
     <OverscanTop>0</OverscanTop>
@@ -480,6 +480,7 @@
     <VerticalSync>false</VerticalSync>
     <UseHdPacks>true</UseHdPacks>
     <IntegerFpsMode>false</IntegerFpsMode>
+    <PaletteData>ZmZm/4gqAP+nEhT/pAA7/34AXP9AAG7/AAZs/wAdVv8ANTP/AEgL/wBSAP8ITwD/TUAA/wAAAP8AAAD/AAAA/62trf/ZXxX//0BC//4ndf/MGqD/ex63/yAxtf8ATpn/AG1r/wCHOP8Akwz/Mo8A/418AP8AAAD/AAAA/wAAAP///v///7Bk//+Qkv//dsb//2rz/8xu/v9wgf7/Ip7q/wC+vP8A2Ij/MORc/4LgRf/ezUj/T09P/wAAAP8AAAD///7////fwP//0tP//8jo///C+//qxP7/xcz+/6XY9/+U5eT/lu/P/6v0vf/M87P/8uu1/7i4uP8AAAD/AAAA/w==</PaletteData>
     <Brightness>0</Brightness>
     <Contrast>0</Contrast>
     <Hue>0</Hue>
@@ -1848,8 +1849,8 @@
     <Y>0</Y>
   </WindowLocation>
   <WindowSize>
-    <Width>1117</Width>
-    <Height>1096</Height>
+    <Width>1116</Width>
+    <Height>1095</Height>
   </WindowSize>
   <CheatWindowLocation>
     <X>0</X>
