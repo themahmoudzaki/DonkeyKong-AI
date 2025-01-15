@@ -5,7 +5,23 @@ Create AI to play doneykong
 How will I do it no clue
 
 Inspiration 
-youtube video
+youtube video by code bullet
 
 Goal 
-To make it better than the one in the youtube video
+To make it better than the one in the youtube video (probably will be many times worse)
+
+A compiled version will be added however if you want to compile yourself these are the prerequisets
+
+python ver<3.11
+cudatoolkit=11.2 cudnn=8.1.0
+pip install opencv-python
+<!-- If you dont want GPU support you may be able to go with a higher version -->
+pip install "tensorflow<2.11"
+pip install pyyaml
+pip install pyautogui
+pip install numpy
+pip install PyGetWindow 
+
++ Cpp compiler and maybe extra shit I will add later
+might just make a Docker or MakeFile to automate that shit
+

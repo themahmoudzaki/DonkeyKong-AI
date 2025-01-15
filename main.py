@@ -3,6 +3,8 @@ import os
 import time
 import shutil
 import pyautogui
+import cv2
+import numpy as np
 import pygetwindow as gw
 import tensorflow as tf
 
@@ -27,21 +29,20 @@ def main():
     setup_game()
 
     snapshot_frame_counter = 1
-    # Get screen dimensions
     screen_width, screen_height = pyautogui.size()
 
-    x = 400  # Offset from the left
-    width = screen_width - 1000  # Subtract 1000 from both left and right
-    y = 0
+    # To be honest I pulled these numbers straight out of my ass
+    x = int (0.15625 * screen_width)
+    width = int (screen_width - ( 0.2604 * screen_width ))
+    y = int (0.03704 * screen_height)
     region = (x, y, width, screen_height)
     print(f"snapshot region: \n{region}")
     try:
         while True:
             snapshot_path = capture_snapshot(snapshot_frame_counter, region)
+            analyse_snapshot(snapshot_path)
             snapshot_frame_counter += 1
     except KeyboardInterrupt: print("\nProgram Stopping")
-        
-    analyse_snapshot(snapshot_path)
     print("\n____________+____________+____________+____________+____________+____________+____________\n")
 
 
@@ -81,13 +82,19 @@ def capture_snapshot(snapshot_frame_counter, snap_region):
     photo_folder = PHOTO_CONFIGS["Path"]["folder"]
     snapshot_path = os.path.join(photo_folder, f"snapshot_{snapshot_frame_counter}.jpeg")
 
-    snapshot = pyautogui.screenshot(f"{snapshot_path}", region=snap_region)
+    snapshot = pyautogui.screenshot(region=snap_region)
+    snapshot = np.array(snapshot)
+    snapshot = cv2.cvtColor(snapshot, cv2.COLOR_BGR2GRAY)
+    cv2.imwrite(f"{snapshot_path}", snapshot)
+
     print(f"\nScreenshot saved at \n{snapshot_path}")
 
     return snapshot_path
 
 
-def analyse_snapshot(snapshot_path): return
+def analyse_snapshot(snapshot_path):
+    # Will give the image to the AI model
+    return
 
 if __name__ == "__main__":
     main()
