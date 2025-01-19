@@ -1,0 +1,16 @@
+SOURCE = training_data.cpp
+TARGET = training_data.exe
+CC = g++
+CFLAGS = -Wall -g
+OBJS = $(SRCS:.cpp=.o)
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS) -lgdi32
+
+%.o: %.cpp
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	del $(OBJS) $(TARGET)

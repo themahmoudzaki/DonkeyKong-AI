@@ -1,22 +1,31 @@
 Game:
   name: Donkey Kong
+
   Paths:
     folder: "Mesen.0.9.9\\"
     emulator: "Mesen.0.9.9\\Mesen.exe"
     game: "Donkey Kong\\Donkey Kong (USA) (GameCube Edition).nes"
+
   Emulator_State:
     RecentGames_Path: "Emulator_State\\RecentGames\\"
     SaveStates_Path: "Emulator_State\\SaveStates\\"
 
+
 Tensorflow:
-  Features:
-  # These are the ascii value of the keys
+  Layers:
+    one:    [256, "relu",    "layer1"]
+    two:    [128, "relu",    "layer2"]
+    three:  [64,  "relu",    "layer3"]
+    four:   [32,  "relu",    "layer4"]
+    output: [4,   "softmax", "output"]
+
   Targets:
     s key: 73
     left arrow: 37
     up arrow: 38
     right arrow: 39
   log_level: '2'
+
 
 Photo_Analysis:
   Path:

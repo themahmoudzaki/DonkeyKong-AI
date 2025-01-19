@@ -1,4 +1,4 @@
-from configs import GAME_CONFIGS, TF_CONFIGS, PHOTO_CONFIGS
+from configs import *
 import os
 import time
 import shutil
